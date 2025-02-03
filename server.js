@@ -2,12 +2,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const morgan = require('morgan');
+
 
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(morgan('dev'));
+
 
 // Database Connection
 mongoose.connect(process.env.MONGODB_URI, {
